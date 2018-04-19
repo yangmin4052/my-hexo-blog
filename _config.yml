@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 我的Hexo博客
 subtitle:
 description:
 keywords:
-author: John Doe
+author: 杨敏
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: https://yangmin4052.github.io
+root: /blog
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -78,4 +78,7 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:yangmin4052/my-hexo-blog.git
+  branch: gh-pages
+  user: yangmin4052
