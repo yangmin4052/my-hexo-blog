@@ -4,7 +4,7 @@ date: 2018-04-20 13:57:37
 tags:
 ---
 本篇讲解如何在github主页创建你的hexo博客，
-下篇讲解如何通过gh-pages创建你的hexo博客，见[如何搭建自己的hexo博客（下）](https://yangmin4052.github.io/2018/04/20/如何搭建自己的hexo博客（下）/)
+下篇讲解如何通过gh-pages创建你的hexo博客，见[如何搭建自己的hexo博客（下）](https://yangmin4052.github.io/my-hexo-blog/2018/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8B%EF%BC%89/)
 
 ## 第一步 安装hexo的命令行工具
 ```
@@ -184,4 +184,4 @@ $ git commit -m '你的提交信息'
 // 推送文件
 $ git push
 ```
-有的小伙伴可能不想在主页写博客，说的就是我自己，所以我准备了[如何搭建自己的hexo博客（下）](https://yangmin4052.github.io/2018/04/20/如何搭建自己的hexo博客（下）/)。
+有的小伙伴可能不想在主页写博客，说的就是我自己，所以我准备了[如何搭建自己的hexo博客（下）](https://yangmin4052.github.io/my-hexo-blog/2018/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8B%EF%BC%89/)。
