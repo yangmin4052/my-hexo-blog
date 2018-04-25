@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/my-hexo-blog/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://yangmin4052.github.io/my-hexo-blog"></form>
@@ -60,6 +60,78 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Git-Bash中alias的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/my-hexo-blog/2018/04/25/Git-Bash中alias的使用/" class="article-date">
+  <time datetime="2018-04-25T06:14:04.000Z" itemprop="datePublished">2018-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/my-hexo-blog/2018/04/25/Git-Bash中alias的使用/">Git Bash中alias的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>在我们安装完git之后，右键会有Git Bash命令行工具</p>
+</li>
+<li><p>当你在使用命令行时，有没有发现命令行好长，一不小心就敲错了几个字母？下面教你如何使用alias合理装逼</p>
+</li>
+</ul>
+<ol>
+<li><p>右键打开Git Bash命令行工具，并执行用vim打开aliases.sh文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/profile.d/</span><br><span class="line">vim aliases.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果你操作过aliases.sh此时可能提示你以何种方式打开，我们选择“直接编辑（（E））”（如果你以前没有操作过aliases.sh这一步可能不会出现）</p>
+</li>
+<li><p>此时你已经进入aliases.sh文件，点击i或者a开始编辑，此时左下角会出现“–插入–”或者“–INSERT–”的提示 </p>
+</li>
+<li><p>aliases.sh文件中已经有两个alias</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">alias ls=&apos;ls -F --color=auto --show-control-chars&apos;</span><br><span class="line">alias ll=&apos;ls -l&apos;</span><br></pre></td></tr></table></figure>
+<p>你可以添加你需要的</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias vc=&apos;/d/Program\ Files/Microsoft\ VS\ Code/Code.exe&apos;</span><br><span class="line">alias subl=&apos;/d/Program\ Files/Sublime\ Text\ 3/sublime\_text.exe&apos;</span><br><span class="line">alias dev=&apos;npm run dev&apos;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>编辑完成之后，点击Esc，输入:wq，或者点击Esc之后，输入两次大写Z，即保存退出</p>
+</li>
+<li><p>关闭Git Bash，重新打开Git Bash，此时如果你想要在当前文件夹打开vscode可以输入</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vc ./</span><br></pre></td></tr></table></figure>
+<p>  如果你想要在当前文件夹打开sublime可以输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subl ./</span><br></pre></td></tr></table></figure>
+<p>  如果你想要在当前文件夹运行开发环境可以输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dev</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>注意：vscode的terminal并不能这样使用哦。</p>
+</li>
+<li><p>发挥你的想象力，用好你的alias。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/25/Git-Bash中alias的使用/" data-id="cjgepw23b0000qkq5bbu9vsxy" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-如何搭建自己的hexo博客（下）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -97,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（下）/" data-id="cjg7xa5oe00024kq5bfkh59sg" class="article-share-link">Share</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（下）/" data-id="cjgepw23q0003qkq5k1c4r2kt" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -143,7 +215,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（上）/" data-id="cjg7xa5oa00014kq5qdsrcgpy" class="article-share-link">Share</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（上）/" data-id="cjgepw23j0001qkq5adn5ve6s" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -188,7 +260,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/hello-world/" data-id="cjg7xa5o200004kq5utqe7udt" class="article-share-link">Share</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/hello-world/" data-id="cjgepw23n0002qkq56o9f5uqc" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -214,7 +286,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/my-hexo-blog/archives/2018/04/">April 2018</a></li></ul>
     </div>
@@ -224,9 +296,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/my-hexo-blog/2018/04/25/Git-Bash中alias的使用/">Git Bash中alias的使用</a>
+          </li>
         
           <li>
             <a href="/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（下）/">如何搭建自己的hexo博客（下）</a>
