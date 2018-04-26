@@ -3,22 +3,26 @@ title: 如何搭建自己的hexo博客（下）
 date: 2018-04-20 13:57:53
 tags:
 ---
-上篇讲解如何在github主页创建你的hexo博客，见[如何搭建自己的hexo博客（上）](https://yangmin4052.github.io/my-hexo-blog/2018/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8A%EF%BC%89/)，
-本篇讲解如何通过gh-pages创建你的hexo博客
-## 第一步 安装hexo的命令行工具
+
+上篇讲解如何在 github 主页创建你的 hexo 博客，见[如何搭建自己的 hexo 博客（上）](https://yangmin4052.github.io/my-hexo-blog/2018/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8A%EF%BC%89/)，本篇讲解如何通过 gh-pages 创建你的 hexo 博客
+
+## 第一步 安装 hexo 的命令行工具
+
 ```
 $ npm install -g hexo-cli
 $ npm install -g hexo-cli@1.0.4 // 如果你想安装指定的版本
-
 ```
-## 第二步 hexo初始化
+
+## 第二步 hexo 初始化
 
 ```
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
 ```
-## 第三步 配置_config.yml
+
+## 第三步 配置\_config.yml
+
 ```
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
@@ -65,7 +69,7 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -74,7 +78,7 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -106,9 +110,12 @@ deploy:
   user: yangmin4052
 ```
 
-## 第四步 在github新建一个仓库
-注意和你的_config.yml文件中的配置相对应，比如我的仓库叫my-hexo-blog
+## 第四步 在 github 新建一个仓库
+
+注意和你的\_config.yml 文件中的配置相对应，比如我的仓库叫 my-hexo-blog
+
 ## 第五步 写博客，发表博客
+
 ```
 // 在你的<folder>中执行一下命令
 // 创建markdown文档
@@ -125,10 +132,12 @@ $ hexo g // 简写
 // 将html静态文件上传到你的github对应的仓库分支上，但现在你的源代码现在并没有上传
 $ hexo deploy
 $ hexo d // 简写
-
 ```
+
 ## 第六步 保存源代码
-博客的html静态文件使用了my-hexo-blog仓库的gh-pages分支（注意这里的分支名必须是gh-pages），如果你需要将你的源代码也放置到该仓库，你可以把你的源代码放置到master分支上，命令如下：
+
+博客的 html 静态文件使用了 my-hexo-blog 仓库的 gh-pages 分支（注意这里的分支名必须是 gh-pages），如果你需要将你的源代码也放置到该仓库，你可以把你的源代码放置到 master 分支上，命令如下：
+
 ```
 // 初始化本地仓库
 $ git init
@@ -146,9 +155,9 @@ $ git remote add origin git@github.com:yangmin4052/yangmin4052.github.io.git
 
 // 推送文件
 git push -u origin master
-
 ```
-## 第七步 如果你换了台电脑，clone你的代码
+
+## 第七步 如果你换了台电脑，clone 你的代码
 
 ```
 // clone你的代码
@@ -165,10 +174,12 @@ $ cd my-blog
 
 // 在新电脑上安装依赖
 $ npm install
-
 ```
+
 ## 第八步 重复第五步
+
 ## 第九步 参见第六步
+
 ```
 // 暂存文件
 $ git add .
@@ -179,4 +190,5 @@ $ git commit -m '你的提交信息'
 // 推送文件
 $ git push
 ```
-有的小伙伴可能想在主页写博客,请看[如何搭建自己的hexo博客（上）](https://yangmin4052.github.io/my-hexo-blog/2018/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8A%EF%BC%89/)。
+
+有的小伙伴可能想在主页写博客,请看[如何搭建自己的 hexo 博客（上）](https://yangmin4052.github.io/my-hexo-blog/2018/04/20/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%8A%EF%BC%89/)。
