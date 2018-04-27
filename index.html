@@ -61,6 +61,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-github之pull-request的简单使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/my-hexo-blog/2018/04/26/github之pull-request的简单使用/" class="article-date">
+  <time datetime="2018-04-26T11:12:43.000Z" itemprop="datePublished">2018-04-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/my-hexo-blog/2018/04/26/github之pull-request的简单使用/">github之pull request的简单使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第一步-在-github-上，-点击Fork来-fork-别人的代码"><a href="#第一步-在-github-上，-点击Fork来-fork-别人的代码" class="headerlink" title="第一步.在 github 上， 点击Fork来 fork 别人的代码"></a>第一步.在 github 上， 点击<strong>Fork</strong>来 fork 别人的代码</h2><h2 id="第二步-在本地，克隆你-fork-出来的代码"><a href="#第二步-在本地，克隆你-fork-出来的代码" class="headerlink" title="第二步.在本地，克隆你 fork 出来的代码"></a>第二步.在本地，克隆你 fork 出来的代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># clone代码</span></span><br><span class="line">git <span class="built_in">clone</span> git@github.com:&lt;你的用户名&gt;/&lt;你fork的项目&gt;.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看你连接的远端仓库</span></span><br><span class="line">git remote -v</span><br><span class="line"><span class="comment"># git remote -v的显示结果</span></span><br><span class="line">origin git@github.com:&lt;你的用户名&gt;/&lt;你fork的项目&gt;.git(fetch)</span><br><span class="line">origin git@github.com:&lt;你的用户名&gt;/&lt;你fork的项目&gt;.git(push)</span><br></pre></td></tr></table></figure>
+<p>在你对项目做出一些修改后</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 提交到暂存区</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建并切换到add-file分支（分支名根据情况自己写）</span></span><br><span class="line">git checkout -b add-file</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到add-file分支</span></span><br><span class="line">git commit -m <span class="string">'提交信息'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送到到你的仓库add-file分支</span></span><br><span class="line">git push origin add-file</span><br></pre></td></tr></table></figure>
+<h2 id="第三步-在-github-上，-点击-New-pull-request（有时你可能需要点击-compare-across-forks）"><a href="#第三步-在-github-上，-点击-New-pull-request（有时你可能需要点击-compare-across-forks）" class="headerlink" title="第三步.在 github 上， 点击 New pull request（有时你可能需要点击 compare across forks）"></a>第三步.在 github 上， 点击 <strong>New pull request</strong>（有时你可能需要点击 <strong>compare across forks</strong>）</h2><p>选择 <em>base fork</em>（项目创始人的仓库）、<em>base</em>（项目创始人的仓库分支）、<em>head fork</em>（你的仓库）、<em>compare</em>（你的仓库分支，比如 add-file 分支，你往往只需要改动这里）。点击 <strong>Create pull request</strong>，填写 <em>title</em>（默认会将你的提交信息填入，可以手动修改）和 <em>comment</em>，点击 <strong>Create pull request</strong>。在项目创始人合并你的代码后（会有 email 通知），点击 <strong>Delete branch</strong> 删除分支</p>
+<h2 id="第四步-在本地，拉取项目创始人仓库最新的代码"><a href="#第四步-在本地，拉取项目创始人仓库最新的代码" class="headerlink" title="第四步.在本地，拉取项目创始人仓库最新的代码"></a>第四步.在本地，拉取项目创始人仓库最新的代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加项目创始人的仓库</span></span><br><span class="line">git remote add upstream git@github.com:&lt;项目创始人的用户名&gt;/&lt;你fork的项目&gt;.git</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看你连接的远端仓库</span></span><br><span class="line">git remote -v</span><br><span class="line"><span class="comment"># git remote -v的显示结果</span></span><br><span class="line">origin git@github.com:&lt;你的用户名&gt;/&lt;你fork的项目&gt;.git(fetch)</span><br><span class="line">origin git@github.com:&lt;你的用户名&gt;/&lt;你fork的项目&gt;.git(push)upstream git@github.com:&lt;项目创始人的用户名&gt;/&lt;你fork的项目&gt;.git(fetch)</span><br><span class="line">upstream git@github.com:&lt;项目创始人的用户名&gt;/&lt;你fork的项目&gt;.git(push)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到master分支</span></span><br><span class="line">git checkout master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 从项目创始人的仓库拉取代码到你的master分支</span></span><br><span class="line">git pull upstream master</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将最新的代码推送到自己的仓库的master分支</span></span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>上面的例子演示了一个比较顺利的pull request，有时你的提交可能不符合规范，会被他人拒绝pull request，那么先从一个比较简单的项目着手，比如说<a href="https://github.com/mynane/PDF" target="_blank" rel="noopener">这里</a>。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/26/github之pull-request的简单使用/" data-id="cjggfjti1000444q5cklq28wq" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-github的gh-pages的使用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/my-hexo-blog/2018/04/26/github的gh-pages的使用/" class="article-date">
@@ -98,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/26/github的gh-pages的使用/" data-id="cjggf0h3w0002o8q5frlqrchd" class="article-share-link">Teilen</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/26/github的gh-pages的使用/" data-id="cjggfjthw000244q52bgxxl7j" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -138,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/26/我的Vue模板/" data-id="cjggf0h450006o8q5bclj657u" class="article-share-link">Teilen</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/26/我的Vue模板/" data-id="cjggfjti7000744q5v7q9374u" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -240,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/26/Linux-centos6-5-下Nginx的安装步骤/" data-id="cjggf0h3t0001o8q5ay9khfry" class="article-share-link">Teilen</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/26/Linux-centos6-5-下Nginx的安装步骤/" data-id="cjggfjths000144q5ianewuuj" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -314,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/25/Git-Bash中alias的使用/" data-id="cjggf0h3e0000o8q5eoq3r6ty" class="article-share-link">Teilen</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/25/Git-Bash中alias的使用/" data-id="cjggfjthf000044q5mg8h0vq5" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -361,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（下）/" data-id="cjggf0h430005o8q5olwsj2lh" class="article-share-link">Teilen</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（下）/" data-id="cjggfjti6000644q5gycdq4t6" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -408,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（上）/" data-id="cjggf0h410004o8q5yptid0b0" class="article-share-link">Teilen</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（上）/" data-id="cjggfjti4000544q5rnxi368b" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -453,7 +495,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/hello-world/" data-id="cjggf0h3z0003o8q5xi3k90bz" class="article-share-link">Teilen</a>
+      <a data-url="https://yangmin4052.github.io/my-hexo-blog/2018/04/20/hello-world/" data-id="cjggfjthy000344q5mmdqrxuh" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -494,6 +536,10 @@
       <ul>
         
           <li>
+            <a href="/my-hexo-blog/2018/04/26/github之pull-request的简单使用/">github之pull request的简单使用</a>
+          </li>
+        
+          <li>
             <a href="/my-hexo-blog/2018/04/26/github的gh-pages的使用/">github的gh-pages的使用</a>
           </li>
         
@@ -507,10 +553,6 @@
         
           <li>
             <a href="/my-hexo-blog/2018/04/25/Git-Bash中alias的使用/">Git Bash中alias的使用</a>
-          </li>
-        
-          <li>
-            <a href="/my-hexo-blog/2018/04/20/如何搭建自己的hexo博客（下）/">如何搭建自己的hexo博客（下）</a>
           </li>
         
       </ul>
